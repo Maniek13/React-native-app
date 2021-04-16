@@ -34,7 +34,7 @@ class HomeScreen extends React.Component {
       };
     render() {
         return (
-                  <Kalkulator/>
+            <Kalkulator/>
           );
         }
   }
@@ -52,8 +52,6 @@ class HomeScreen extends React.Component {
     }
   }
 
- 
-
   const Stack  = createStackNavigator();
 
   function Container() {
@@ -63,8 +61,7 @@ class HomeScreen extends React.Component {
                 <Stack.Screen
                 name="Home"
                 component={HomeScreen}
-                option
-                s={{ title: 'Welcome' }}
+                options={{ title: 'Welcome' }}
                 />
 
                 <Stack.Screen

@@ -1,9 +1,11 @@
 import React from 'react';
-import Show from './Objects/getData';
+import Add from './Objects/addData';
 
 const Data = () =>{  
     return (
-        <Show/>
+        <React.Fragment>
+            <Add/>
+        </React.Fragment>   
     )
 }
 
