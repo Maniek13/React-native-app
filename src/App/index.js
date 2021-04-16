@@ -1,13 +1,12 @@
 import React from 'react';
-import { Button, View} from 'react-native';
+import { Button, View, ScrollView} from 'react-native';
 import Kalkulator from "src/screens/Kalkulator"; 
+import Data from "src/screens/Data"; 
 import PropTypes from 'prop-types';
 import styles from './styles';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
-
 
 
 class HomeScreen extends React.Component {
@@ -22,7 +21,9 @@ class HomeScreen extends React.Component {
         return (
             <View >
                 <Button  title="Kalkulator" onPress={() => navigate('Kalkulator')}/>
+                <Button  title="Data" onPress={() => navigate('Data')}/>
             </View>
+            
         )
     }
   }
@@ -36,6 +37,21 @@ class HomeScreen extends React.Component {
     render() {
         return (
                   <Kalkulator/>
+          );
+        }
+  }
+
+  class DataScreen extends React.Component {
+    static navigationOptions = { 
+        title: 'Data'
+      };
+    render() {
+        return (
+          <ScrollView style = {styles.scroll_view}       
+        >
+                  <Data/>
+
+                  </ScrollView>
           );
         }
   }
@@ -59,6 +75,12 @@ class HomeScreen extends React.Component {
                 name="Kalkulator"
                 component={CalcScreen}
                 />
+
+                <Stack.Screen
+                name="Data"
+                component={DataScreen}
+                />
+
 
                 
             </Stack.Navigator>
