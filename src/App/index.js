@@ -10,12 +10,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 
 class HomeScreen extends React.Component {
-    static navigationOptions = { 
-        title: 'Welcome',
-        headerStyle: { backgroundColor: '#f4511e' },
-        headerTintColor: '#fff',
-        headerTitleStyle: { fontWeight: 'bold' },
-    };
     render() {
         const {navigate} = this.props.navigation;
         return (
@@ -29,9 +23,6 @@ class HomeScreen extends React.Component {
   }
 
   class CalcScreen extends React.Component {
-    static navigationOptions = { 
-        title: 'Kalkulator'
-      };
     render() {
         return (
             <Kalkulator/>
@@ -40,9 +31,6 @@ class HomeScreen extends React.Component {
   }
 
   class DataScreen extends React.Component {
-    static navigationOptions = { 
-        title: 'Data'
-      };
     render() {
       return (
         <ScrollView style = {styles.scroll_view}>
@@ -61,17 +49,30 @@ class HomeScreen extends React.Component {
                 <Stack.Screen
                 name="Home"
                 component={HomeScreen}
-                options={{ title: 'Welcome' }}
+                options={{ 
+                  title: 'Welcome',
+                  headerStyle: { backgroundColor: '#f4511e' },
+                  headerTintColor: '#fff',
+                  headerTitleStyle: { alignSelf: 'center' }
+                }}
                 />
 
                 <Stack.Screen
                 name="Kalkulator"
                 component={CalcScreen}
+                options={{ 
+                  headerStyle: { backgroundColor: '#f4511e' },
+                  headerTintColor: '#fff'
+                }}
                 />
 
                 <Stack.Screen
                 name="Data"
                 component={DataScreen}
+                options={{ 
+                  headerStyle: { backgroundColor: '#f4511e' },
+                  headerTintColor: '#fff'
+                }}
                 />
 
 

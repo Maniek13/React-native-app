@@ -3,8 +3,8 @@ import {StyleSheet} from 'react-native'
 export default StyleSheet.create({
 
     screen:{
-    backgroundColor: '#fff',
-    height: "100%"
+        backgroundColor: '#fff',
+        height: "100%"
     },
     
     przyciski: {
