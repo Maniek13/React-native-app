@@ -28,8 +28,6 @@ class HomeScreen extends React.Component {
     }
   }
 
-
-
   class CalcScreen extends React.Component {
     static navigationOptions = { 
         title: 'Kalkulator'
@@ -46,14 +44,12 @@ class HomeScreen extends React.Component {
         title: 'Data'
       };
     render() {
-        return (
-          <ScrollView style = {styles.scroll_view}       
-        >
-                  <Data/>
-
-                  </ScrollView>
-          );
-        }
+      return (
+        <ScrollView style = {styles.scroll_view}>
+          <Data/>
+        </ScrollView>
+      );
+    }
   }
 
  
